@@ -1,0 +1,6 @@
+{
+  "name": "TrustLens AI",
+  "description": "AI-powered scam and digital trust assistant that analyzes suspicious communication, highlights risk indicators, and provides actionable verification guidance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,45 @@
+{
+  "entities": {
+    "userProfile": {
+      "title": "UserProfile",
+      "description": "User profile metadata",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "maxLength": 128 },
+        "displayName": { "type": "string", "maxLength": 256 },
+        "email": { "type": "string", "maxLength": 256 },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email"]
+    },
+    "analysisRecord": {
+      "title": "AnalysisRecord",
+      "description": "User saved scam analysis record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "maxLength": 128 },
+        "userId": { "type": "string", "maxLength": 128 },
+        "timestamp": { "type": "string", "maxLength": 64 },
+        "rawText": { "type": "string", "maxLength": 50000 },
+        "selectedCategory": { "type": "string", "maxLength": 64 },
+        "inferredCategory": { "type": "string", "maxLength": 64 },
+        "risk_level": { "type": "string", "enum": ["low", "moderate", "high"] },
+        "risk_score": { "type": "number" },
+        "summary": { "type": "string", "maxLength": 4000 },
+        "recommended_action": { "type": "string", "maxLength": 2000 },
+        "verification_steps": { "type": "array" }
+      },
+      "required": ["id", "userId", "rawText", "risk_level", "risk_score"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "userProfile",
+      "description": "User profile data"
+    },
+    "/users/{userId}/analyses/{analysisId}": {
+      "schema": "analysisRecord",
+      "description": "User's private saved analyses"
+    }
+  }
+}

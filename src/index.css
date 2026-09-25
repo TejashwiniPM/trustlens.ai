@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Custom midnight blue scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080e22;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2c56;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2b3e75;
+}
+
+body {
+  background-color: #060a17;
+  color: #e2e8f0;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+@media print {
+  header, footer, #new-analysis-button, #share-report-button, #chat-section, #export-buttons, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
