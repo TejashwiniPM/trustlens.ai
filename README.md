@@ -3,7 +3,6 @@
 
 # 🛡️ TrustLens.ai — Real-Time AI Scam & Fraud Detection
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Online-brightgreen?style=for-the-badge&logo=google-chrome)](https://ais-pre-yuolf4mgcxij43javoxdx3-484792846399.asia-southeast1.run.app)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 🌐 **Live Application:** [https://ais-pre-yuolf4mgcxij43javoxdx3-484792846399.asia-southeast1.run.app](https://ais-pre-yuolf4mgcxij43javoxdx3-484792846399.asia-southeast1.run.app)
