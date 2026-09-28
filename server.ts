@@ -12,7 +12,7 @@ dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
-const PORT = 3000;
+const PORT = Number(process.env.PORT) || 3000;
 
 app.use(express.json({ limit: '5mb' }));
 
@@ -456,7 +456,7 @@ async function startServer() {
   }
 
   server.listen(PORT, '0.0.0.0', () => {
-    console.log(`TrustLens AI server running at http://0.0.0.0:${PORT}`);
+    console.log(`TrustLens AI server running at http://localhost:${PORT} (or http://0.0.0.0:${PORT})`);
   });
 }
 
